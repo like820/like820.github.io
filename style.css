@@ -1,0 +1,79 @@
+
+html, body {
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    /* opacity: 0.8; */
+    filter: blur(8px);
+    letter-spacing: 0.082em;
+}
+.info{
+    /* margin: 3em; */
+    font-size: 2em;
+    color: ghostwhite;
+    font-family: monospace;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* border: 10px solid blue; */
+    text-shadow: 4px 3px 4px #000082
+
+}
+.about{
+    font-size: 3vw;
+    color: #000082;
+    background-color: ghostwhite;
+    /* width: 100vw; */
+    padding: 2em;
+    filter: blur(1px);
+
+    margin: 0.82em;
+    border-radius: 0.82em;
+}
+.isthisthemanifest{
+    font-size: 2vw;
+    color: #000082;
+    background-color: ghostwhite;
+    /* width: 100vw; */
+    padding: 2em;
+    filter: blur(3px);
+
+    margin: 0.82em;
+    border-radius: 0.82em;
+    display: none;
+}
+a{
+    text-decoration: none; 
+    color: ghostwhite;
+}
+b:hover{
+color: rgb(0, 82, 0);
+transition: all 2s;
+}
+b{
+    color: #000082;
+    transition: all 2s;
+}
+
+h1:hover{
+    color: rgb(82, 0, 0);
+    transition: all 2s;
+    }
+    h1{
+        color: #000082;
+        transition: all 2s;
+    }
+    
+
