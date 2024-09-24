@@ -46,7 +46,7 @@ canvas {
     background-color: ghostwhite;
     /* width: 100vw; */
     padding: 2em;
-    filter: blur(1px);
+/*     filter: blur(1px); */
 
     margin: 0.82em;
     border-radius: 0.82em;
