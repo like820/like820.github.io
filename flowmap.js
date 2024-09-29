@@ -80,7 +80,7 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                 dropArea.style.zIndex = '10';
                 dropArea.style.opacity = '0';
                 dropArea.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-                dropArea.style.pointerEvents = 'none'; // Disable pointer events
+                dropArea.style.pointerEvents = 'none'; // Disable pointer events initially
                 document.body.appendChild(dropArea);
 
                 dropArea.addEventListener('dragover', (e) => {
@@ -109,6 +109,24 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                         };
                         reader.readAsDataURL(file);
                     }
+                });
+
+                // Prevent default behavior for drag and drop
+                document.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                });
+                document.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                });
+
+                // Enable pointer events when dragging starts
+                document.addEventListener('dragstart', () => {
+                    dropArea.style.pointerEvents = 'auto';
+                });
+
+                // Disable pointer events when dragging ends
+                document.addEventListener('dragend', () => {
+                    dropArea.style.pointerEvents = 'none';
                 });
 
                 img.src = 'water4.png';
@@ -200,6 +218,12 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                     flowmap.update();
 
                     program.uniforms.uTime.value = t * 0.1;
+
+                    // Check if texture needs update
+                    if (texture.needsUpdate) {
+                        texture.update();
+                        texture.needsUpdate = false;
+                    }
 
                     renderer.render({ scene: mesh });
                 }
