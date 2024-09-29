@@ -28,13 +28,13 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                     vec3 flow = texture2D(tFlow, vUv).rgb;
 
                     // Use flow to adjust the uv lookup of a texture
-                    vec2 uv = gl_FragCoord.xy / 4200.0;
+                    vec2 uv = vUv; // Use vUv directly to cover the entire canvas
                     uv += flow.xy * 0.42;
                     vec3 tex = texture2D(tWater, uv).rgb;
 
                     // Oscillate between raw values and the affected texture above
                     // tex = mix(tex, flow * 24 + 24, smoothstep( -0.3, 0.7, sin(uTime)));
-                    tex=tex;
+                    tex = tex;
 
                     gl_FragColor.rgb = tex;
                     gl_FragColor.a = 1.0;
@@ -70,7 +70,44 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                 const img = new Image();
                 img.onload = () => (texture.image = img);
             
-                img.src = 'water.png';
+                // Add drag-and-drop functionality
+                const dropArea = document.createElement('div');
+                dropArea.style.position = 'fixed';
+                dropArea.style.top = '0';
+                dropArea.style.left = '0';
+                dropArea.style.width = '100%';
+                dropArea.style.height = '100%';
+                dropArea.style.zIndex = '10';
+                dropArea.style.opacity = '0';
+                dropArea.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                document.body.appendChild(dropArea);
+
+                dropArea.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    dropArea.style.opacity = '1';
+                });
+
+                dropArea.addEventListener('dragleave', () => {
+                    dropArea.style.opacity = '0';
+                });
+
+                dropArea.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    dropArea.style.opacity = '0';
+
+                    const file = e.dataTransfer.files[0];
+                    if (file && file.type.startsWith('image/')) {
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            const newImg = new Image();
+                            newImg.onload = () => (texture.image = newImg);
+                            newImg.src = event.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                img.src = 'water3.png';
 
                 const program = new Program(gl, {
                     vertex,
