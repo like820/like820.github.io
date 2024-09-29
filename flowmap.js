@@ -107,7 +107,7 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                     }
                 });
 
-                img.src = 'water3.png';
+                img.src = 'water4.jpg';
 
                 const program = new Program(gl, {
                     vertex,
