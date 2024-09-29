@@ -80,20 +80,24 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                 dropArea.style.zIndex = '10';
                 dropArea.style.opacity = '0';
                 dropArea.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                dropArea.style.pointerEvents = 'none'; // Disable pointer events
                 document.body.appendChild(dropArea);
 
                 dropArea.addEventListener('dragover', (e) => {
                     e.preventDefault();
                     dropArea.style.opacity = '1';
+                    dropArea.style.pointerEvents = 'auto'; // Enable pointer events during drag
                 });
 
                 dropArea.addEventListener('dragleave', () => {
                     dropArea.style.opacity = '0';
+                    dropArea.style.pointerEvents = 'none'; // Disable pointer events when not dragging
                 });
 
                 dropArea.addEventListener('drop', (e) => {
                     e.preventDefault();
                     dropArea.style.opacity = '0';
+                    dropArea.style.pointerEvents = 'none'; // Disable pointer events after drop
 
                     const file = e.dataTransfer.files[0];
                     if (file && file.type.startsWith('image/')) {
@@ -107,7 +111,7 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                     }
                 });
 
-                img.src = 'water4.jpg';
+                img.src = 'water4.png';
 
                 const program = new Program(gl, {
                     vertex,
