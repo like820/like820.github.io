@@ -6,7 +6,7 @@ html {
 body {
     height: 100vh;
     scroll-behavior: smooth;
-    font-family: monospace;
+    font-family: "Source Code Pro", 'Courier New', Courier, monospace;
     letter-spacing: 0.082em;
     /* overflow: hidden; */
 }
@@ -30,7 +30,7 @@ canvas {
     /* margin: 3em; */
     font-size: 2em;
     color: ghostwhite;
-    font-family: monospace;
+font-family: "Source Serif 4", Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     display: flex;
     justify-content: center;
