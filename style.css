@@ -20,7 +20,7 @@ canvas {
     height: 100%;
     pointer-events: none;
     /* opacity: 0.8; */
-    filter: blur(8px);
+    filter: blur(2px);
     letter-spacing: 0.082em;
     scale: 1.082;
     mix-blend-mode: color-burn;
