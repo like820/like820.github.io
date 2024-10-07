@@ -41,7 +41,9 @@ canvas {
 
 }
 .about{
-    font-size: 3vw;
+    max-width: 420px;
+    margin: auto;
+/*     font-size: 3vw; */
     color: #000082;
     background-color: ghostwhite;
     /* width: 100vw; */
@@ -52,6 +54,7 @@ canvas {
     border-radius: 0.82em;
 }
 .isthisthemanifest{
+    display:none;
     font-size: 2vw;
     color: #000082;
     background-color: ghostwhite;
