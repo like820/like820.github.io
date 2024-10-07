@@ -42,7 +42,7 @@ canvas {
 }
 .about{
     max-width: 420px;
-    margin: auto;
+
 /*     font-size: 3vw; */
     color: #000082;
     background-color: ghostwhite;
@@ -50,8 +50,9 @@ canvas {
     padding: 2em;
 /*     filter: blur(1px); */
 
-    margin: 0.82em;
+    margin: auto;
     border-radius: 0.82em;
+    
 }
 .isthisthemanifest{
     display:none;
