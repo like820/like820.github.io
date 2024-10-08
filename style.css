@@ -10,7 +10,13 @@ body {
     letter-spacing: 0.082em;
     /* overflow: hidden; */
 }
-
+h4{
+font-family: "Source Code Pro", 'Courier New', Courier, monospace !important;
+}
+p{font-family: "Source Code Pro", 'Courier New', Courier, monospace !important; 
+}
+input{font-family: "Source Code Pro", 'Courier New', Courier, monospace !important; 
+}
 
 canvas {
     position:fixed;
@@ -28,7 +34,7 @@ canvas {
 }
 .info{
     /* margin: 3em; */
-    font-size: 8vw;
+    font-size: 4vw;
     color: ghostwhite;
     /* font-family: "Source Serif 4", Georgia, 'Times New Roman', Times, serif; */
     font-weight: bold;
@@ -90,4 +96,16 @@ h1:hover{
     
 .wet{
    filter: blur(1px);
+}
+footer {
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: ghostwhite;
+    text-align: center;
+    margin: auto;
+    filter: url(#warp);
+ 
+    font-size: smaller;
 }
