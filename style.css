@@ -9,6 +9,7 @@ body {
     font-family: "Source Code Pro", 'Courier New', Courier, monospace;
     letter-spacing: 0.082em;
     /* overflow: hidden; */
+    transform: translate3d(0,0,0);
 }
 h4{
 font-family: "Source Code Pro", 'Courier New', Courier, monospace !important;
