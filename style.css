@@ -95,7 +95,7 @@ h1:hover{
     }
     
 .wet{
-   filter: blur(1px) url(#warp);
+   filter:url(#warp) blur(1px);
 }
 footer {
     position: relative; /* Change from fixed to relative */
