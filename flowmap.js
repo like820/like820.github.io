@@ -76,7 +76,7 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                 dropArea.style.top = '0';
                 dropArea.style.left = '0';
                 dropArea.style.width = '100%';
-                dropArea.style.height = '100%';
+                dropArea.style.height = '100vh';
                 dropArea.style.zIndex = '10';
                 dropArea.style.opacity = '0';
                 dropArea.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
@@ -85,16 +85,20 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                 dropArea.addEventListener('dragover', (e) => {
                     e.preventDefault();
                     dropArea.style.opacity = '1';
+                    dropArea.style.zIndex = '-200';
+                
                 });
 
                 dropArea.addEventListener('dragleave', () => {
                     dropArea.style.opacity = '0';
+                    dropArea.style.zIndex = '-200';
+                    console.log('dragleave');
                 });
 
                 dropArea.addEventListener('drop', (e) => {
                     e.preventDefault();
                     dropArea.style.opacity = '0';
-
+                    dropArea.style.zIndex = '-200';
                     const file = e.dataTransfer.files[0];
                     if (file && file.type.startsWith('image/')) {
                         const reader = new FileReader();
@@ -118,11 +122,14 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                 // Enable pointer events when dragging starts
                 document.addEventListener('dragstart', () => {
                     dropArea.style.pointerEvents = 'auto';
+                    dropArea.style.zIndex = '10';
+       
                 });
 
                 // Disable pointer events when dragging ends
                 document.addEventListener('dragend', () => {
                     dropArea.style.pointerEvents = 'none';
+                    dropArea.style.zIndex = '-200';
                 });
 
                 img.src = 'water4.jpg';

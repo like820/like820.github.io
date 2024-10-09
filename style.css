@@ -9,7 +9,7 @@ body {
     font-family: "Source Code Pro", 'Courier New', Courier, monospace;
     letter-spacing: 0.082em;
     /* overflow: hidden; */
-    transform: translate3d(0,0,0);
+
 }
 h4{
 font-family: "Source Code Pro", 'Courier New', Courier, monospace !important;
@@ -31,6 +31,7 @@ canvas {
     letter-spacing: 0.082em;
     scale: 1.082;
     mix-blend-mode: color-burn;
+    transform: translate3d(0,0,0);
 
 }
 .info{
@@ -42,7 +43,8 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 42vh;
+    height: 50vh;
     /* border: 10px solid blue; */
     text-shadow: 4px 3px 4px #000082
 
