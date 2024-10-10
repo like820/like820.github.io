@@ -53,8 +53,8 @@ canvas {
     max-width: 420px;
 
 /*     font-size: 3vw; */
-    color: #000082;
-    background-color: ghostwhite;
+    color: white;
+    background-color: #000082;
     /* width: 100vw; */
     padding: 2em;
 /*     filter: blur(1px); */
