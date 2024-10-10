@@ -77,7 +77,7 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                 dropArea.style.left = '0';
                 dropArea.style.width = '100%';
                 dropArea.style.height = '100vh';
-                dropArea.style.zIndex = '10';
+                dropArea.style.zIndex = '-200';
                 dropArea.style.opacity = '0';
                 dropArea.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
                 document.body.appendChild(dropArea);
