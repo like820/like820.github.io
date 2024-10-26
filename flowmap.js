@@ -132,7 +132,7 @@ import { Renderer, Program, Texture, Mesh, Vec2, Flowmap, Triangle } from '../sr
                     dropArea.style.zIndex = '-200';
                 });
 
-                img.src = 'water4.jpg';
+                img.src = 'water5.jpg';
 
                 const program = new Program(gl, {
                     vertex,
