@@ -47,7 +47,7 @@ canvas {
     margin-top: 42vh;
     height: 50vh;
     /* border: 10px solid blue; */
-    text-shadow: 4px 3px 4px #000082
+    text-shadow: 4px 3px 4px #004282
 
 }
 .about{
@@ -55,7 +55,7 @@ canvas {
 
 /*     font-size: 3vw; */
     color: white;
-    background-color: #000082;
+    background-color: #004282;
     /* width: 100vw; */
     padding: 2em;
 /*     filter: blur(1px); */
@@ -67,7 +67,7 @@ canvas {
 .isthisthemanifest{
     display:none;
     font-size: 2vw;
-    color: #000082;
+    color: #004282;
     background-color: ghostwhite;
     /* width: 100vw; */
     padding: 2em;
@@ -85,7 +85,7 @@ color: rgb(0, 82, 0);
 transition: all 2s;
 }
 b{
-    color: #000082;
+    color: #004282;
     transition: all 2s;
 }
 
@@ -94,7 +94,7 @@ h1:hover{
     transition: all 2s;
     }
     h1{
-        color: #000082;
+        color: #004282;
         transition: all 2s;
     }
     
