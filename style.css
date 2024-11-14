@@ -30,7 +30,7 @@ canvas {
     filter: blur(2px);
     letter-spacing: 0.082em;
     scale: 1.082;
-    mix-blend-mode: color-burn;
+/*     mix-blend-mode: color-burn; */
     transform: translate3d(0,0,0);
     filter:url(#warp) blur(1px);
 
