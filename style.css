@@ -1,104 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+:root {
+    --main: #004282; /* Main color */
+    --back: #ebebeb; /* Background color */
+}
 html {
     height: 100vh;
     scroll-behavior: smooth;
 }
 body {
+    color: var(--main);
+    background-color: var(--back);
     height: 100vh;
     scroll-behavior: smooth;
     font-family: "Source Code Pro", 'Courier New', Courier, monospace;
     letter-spacing: 0.082em;
     /* overflow: hidden; */
-
+    background-color: var(--back);
+    transition: all 0.82s ease;
 }
+body.dark {
+    --main: #ebebeb; /* Main color */
+    --back: #004282; /* Background color */
+}
+
+a {
+    color: var(--main);
+    text-decoration: none;
+}
+h1{
+    /* justify-self: center; */
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-family: "Source Serif 4", serif;
+    font-weight: lighter;
+}
+h2{
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: clamp(2rem, 2vw + 2rem, 6rem);
+    letter-spacing: 0;
+ 
+}
+h3{
+    font-weight: 400;
+    font-size: clamp(1rem, 1vw + 1rem, 4rem);
+}
+    /* overwrite form */
 h4{
 font-family: "Source Code Pro", 'Courier New', Courier, monospace !important;
 }
+
 p{font-family: "Source Code Pro", 'Courier New', Courier, monospace !important; 
+    font-weight: 200;
 }
-input{font-family: "Source Code Pro", 'Courier New', Courier, monospace !important; 
-}
-
-canvas {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    /* opacity: 0.8; */
-    filter: blur(2px);
-    letter-spacing: 0.082em;
-    scale: 1.082;
-/*     mix-blend-mode: color-burn; */
-    transform: translate3d(0,0,0);
-    filter:url(#warp) blur(1px);
-    z-index:-100;
-
-}
-.info{
-    /* margin: 3em; */
-    font-size: 4vw;
-    color: ghostwhite;
-    /* font-family: "Source Serif 4", Georgia, 'Times New Roman', Times, serif; */
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 42vh;
-    height: 50vh;
-    /* border: 10px solid blue; */
-    text-shadow: 4px 3px 4px #004282
-
-}
-.about{
+header{
     max-width: 420px;
-
-/*     font-size: 3vw; */
-    color: white;
-    background-color: #004282;
-    /* width: 100vw; */
-    padding: 2em;
-/*     filter: blur(1px); */
-
     margin: auto;
-    border-radius: 0.82em;
-    
-}
-.isthisthemanifest{
-    display:none;
-    font-size: 2vw;
-    color: #004282;
-    background-color: ghostwhite;
-    /* width: 100vw; */
-    padding: 2em;
-    filter: blur(3px);
-
-    margin: 0.82em;
-    border-radius: 0.82em;
-}
-a{
-    text-decoration: none; 
-    color: ghostwhite;
-}
-b:hover{
-color: rgb(0, 82, 0);
-transition: all 2s;
-}
-b{
-    color: #004282;
-    transition: all 2s;
-}
-
-h1:hover{
-    color: rgb(82, 0, 0);
-    transition: all 2s;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     }
-    h1{
-        color: #004282;
-        transition: all 2s;
-    }
-    
 .wet{
    filter:url(#warp) blur(1px);
 }
@@ -107,10 +69,18 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    color: ghostwhite;
+    color: var(--main);
     text-align: center;
     margin: auto;
-    filter: url(#warp);
- 
     font-size: smaller;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 2em;
+}
+.thumbnail{
+    max-width: 30vw;
 }
