@@ -60,6 +60,7 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    padding: 2em;
     }
 .wet{
    filter:url(#warp) blur(1px);
@@ -83,4 +84,11 @@ footer {
 }
 .thumbnail{
     max-width: 30vw;
+}
+.gallery{
+   display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    justify-content: center;
 }

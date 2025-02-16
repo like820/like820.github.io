@@ -6,12 +6,3 @@
     ml('account', '1115383');
 
     
-    //darkmode
-    let checkboxDark = document.querySelector(".darkcheckbox");
-    checkboxDark.addEventListener('change', () => {
-        document.body.classList.toggle('dark');
-        // document.body.classList.toggle('wet');
- 
-
-     
-    });
