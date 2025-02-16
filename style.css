@@ -116,10 +116,9 @@ footer {
     }
 
     .gallery{
-        /* columns: 200px; */
+        columns: 200px;
      display: flex;
      flex-wrap: wrap;
-    place-content: space-between;
     }
     .gallery img{
         transition: all 0.82s;
