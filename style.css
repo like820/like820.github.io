@@ -19,10 +19,13 @@ body {
     background-color: var(--back);
     transition: all 0.82s ease;
 }
-body.dark {
-    --main: #ebebeb; /* Main color */
+@media (prefers-color-scheme: dark) {
+  :root {
+        --main: #ebebeb; /* Main color */
     --back: #004282; /* Background color */
+  }
 }
+
 
 a {
     color: var(--main);
