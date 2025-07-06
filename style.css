@@ -83,9 +83,12 @@ footer {
 .links{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: nowrap;
+    flex-wrap: rap;
     flex-direction: row;
     margin: 2em;
+}
+.link{
+    padding: 1em;
 }
 .thumbnail{
     max-width: 30vw;
