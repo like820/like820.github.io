@@ -83,7 +83,7 @@ footer {
 .links{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: rap;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 2em;
 }
