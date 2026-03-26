@@ -86,6 +86,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 2em;
+    display:none;
 }
 .link{
     padding: 1em;
